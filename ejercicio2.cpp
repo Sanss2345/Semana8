@@ -1,28 +1,3 @@
-/*#include <iostream>
-#include <iomanip>
-#include <sstream>
-#include <string>
-
-using namespace std;
-
-int main() {
-    string secret_pin = "9999"; // PIN "guardado" en el programa
-
-    for (int i = 0; i < 10000; i++) {
-        ostringstream oss;
-        oss << setw(4) << setfill('0') << i;  // 0000..9999
-        string guess = oss.str();
-
-        if (guess == secret_pin) {
-            cout << "PIN encontrado: " << guess << "\n";
-            cout << "Intentos: " << (i + 1) << "\n";
-            break;
-        }
-    }
-
-    return 0;
-}
-
 #include <iostream>
 #include <vector>
 #include <random>
@@ -83,57 +58,6 @@ int main() {
     cout << "\nArreglo ordenado (Merge Sort):\n";
     for (int x : arr) cout << x << " ";
     cout << "\n";
-
-    return 0;
-}
-
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-using namespace std;
-
-int main() {
-    int amount = 100;
-    vector<int> coins = {1, 5, 10, 25};
-
-    sort(coins.rbegin(), coins.rend());
-
-    vector<int> result;
-
-    for (int coin : coins) {
-        while (amount >= coin) {
-            amount -= coin;
-            result.push_back(coin);
-        }
-    }
-
-    cout << "Monedas usadas: ";
-    for (int c : result)
-        cout << c << " ";
-
-    cout << "\nCantidad total: " << result.size() << endl;
-
-    return 0;
-}
-*/
-
-#include <iostream>
-using namespace std;
-
-int main() {
-    int n;
-    cout << "Ingrese n: ";
-    cin >> n;
-
-    long long a = 0, b = 1;
-
-    for (int i = 0; i < n; i++) {
-        cout << a << " ";
-        long long temp = a;
-        a = b;
-        b = temp + b;
-    }
 
     return 0;
 }
